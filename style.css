@@ -259,6 +259,9 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow:
+    0 0 6px rgba(255,255,255,.15),
+    0 0 14px rgba(255,255,255,.05);
 }
 
 
@@ -385,6 +388,10 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  text-shadow:
+    0 0 6px rgba(255,255,255,.15),
+    0 0 14px rgba(255,255,255,.05);
 }
 
 
@@ -396,6 +403,10 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  text-shadow:
+    0 0 6px rgba(255,255,255,.15),
+    0 0 14px rgba(255,255,255,.05);
 }
 
 
