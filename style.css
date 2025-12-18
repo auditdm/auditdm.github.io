@@ -385,14 +385,11 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  /* subtle white “halo” for readability */
+  text-shadow: 0 0 6px rgba(255,255,255,.45);
 }
 
-@media (prefers-color-scheme: dark){
-  .chip{
-    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* bright */
-    text-shadow: 0 0 10px rgba(165,180,252,.28);
-  }
-}
 
 .chip_section{
   font-size: 140%;
@@ -402,14 +399,11 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  /* subtle white “halo” for readability */
+  text-shadow: 0 0 6px rgba(255,255,255,.45);
 }
 
-@media (prefers-color-scheme: dark){
-  .chip_section{
-    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* bright */
-    text-shadow: 0 0 10px rgba(165,180,252,.28);
-  }
-}
 
 .proposal__sub{
   margin: 10px 0 0;
