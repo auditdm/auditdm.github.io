@@ -379,18 +379,26 @@ code {
   letter-spacing: -0.02em;
 }
 
+/* default (light mode) */
 .chip{
   display: inline-block;
   background: linear-gradient(90deg, #111827, #6366f1);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
-  /* white outline */
-  -webkit-text-stroke: 1px rgba(255,255,255,.9);
-  paint-order: stroke fill; /* if supported */
 }
 
+/* dark mode: brighter gradient + glow for contrast */
+@media (prefers-color-scheme: dark){
+  .chip{
+    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* light gray -> light indigo */
+    -webkit-text-stroke: 0.6px rgba(255,255,255,.35);   /* subtle outline */
+    text-shadow: 0 0 10px rgba(165,180,252,.35);        /* soft glow */
+  }
+}
+
+
+/* default (light mode) */
 .chip_section{
   font-size: 140%;
   font-weight: 500;
@@ -399,20 +407,14 @@ code {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
-  /* white outline */
-  -webkit-text-stroke: 1px rgba(255,255,255,.9);
-  paint-order: stroke fill; /* if supported */
 }
 
-/* fallback for browsers that don't support text-stroke well */
-@supports not (-webkit-text-stroke: 1px white){
-  .chip{
-    text-shadow:
-      0 1px 0 rgba(255,255,255,.85),
-      1px 0 0 rgba(255,255,255,.85),
-      0 -1px 0 rgba(255,255,255,.85),
-      -1px 0 0 rgba(255,255,255,.85);
+/* dark mode: brighter gradient + glow for contrast */
+@media (prefers-color-scheme: dark){
+  .chip_section{
+    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* light gray -> light indigo */
+    -webkit-text-stroke: 0.6px rgba(255,255,255,.35);   /* subtle outline */
+    text-shadow: 0 0 10px rgba(165,180,252,.35);        /* soft glow */
   }
 }
 
