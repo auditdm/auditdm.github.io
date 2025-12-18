@@ -379,7 +379,6 @@ code {
   letter-spacing: -0.02em;
 }
 
-/* default (light mode) */
 .chip{
   display: inline-block;
   background: linear-gradient(90deg, #111827, #6366f1);
@@ -388,17 +387,13 @@ code {
   color: transparent;
 }
 
-/* dark mode: brighter gradient + glow for contrast */
 @media (prefers-color-scheme: dark){
   .chip{
-    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* light gray -> light indigo */
-    -webkit-text-stroke: 0.6px rgba(255,255,255,.35);   /* subtle outline */
-    text-shadow: 0 0 10px rgba(165,180,252,.35);        /* soft glow */
+    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* bright */
+    text-shadow: 0 0 10px rgba(165,180,252,.28);
   }
 }
 
-
-/* default (light mode) */
 .chip_section{
   font-size: 140%;
   font-weight: 500;
@@ -409,12 +404,10 @@ code {
   color: transparent;
 }
 
-/* dark mode: brighter gradient + glow for contrast */
 @media (prefers-color-scheme: dark){
   .chip_section{
-    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* light gray -> light indigo */
-    -webkit-text-stroke: 0.6px rgba(255,255,255,.35);   /* subtle outline */
-    text-shadow: 0 0 10px rgba(165,180,252,.35);        /* soft glow */
+    background: linear-gradient(90deg, #e5e7eb, #a5b4fc); /* bright */
+    text-shadow: 0 0 10px rgba(165,180,252,.28);
   }
 }
 
