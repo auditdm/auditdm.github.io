@@ -1,0 +1,348 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/chalkduster');
+</style>
+<script src="./sm/assets/teaser-data.js"></script>
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Differences That Matter: Auditing Models for Capability Gap Discovery and Rectification</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;Differences That Matter: Auditing Models for Capability Gap Discovery and Rectification.&#39;">
+    <!-- <link rel="icon" href="./path.jpg"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Differences That Matter: Auditing Models for Capability Gap Discovery and Rectification</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;Differences That Matter: Auditing Models for Capability Gap Discovery and Rectification.&#39;">
+    <!-- <link rel="icon" href="./path.jpeg"> -->
+</head>
+
+<body>
+    <p class="title"><span class="gradient-text">Differences That Matter:</span> <br> Auditing Models for Capability Gap Discovery and Rectification</p>
+    <!-- <div style="text-align: center; font-size: 40pt; margin-bottom: 30px"> -->
+            <!-- <span>CVPR 2023</span> -->
+    <!-- </div> -->
+    &nbsp;<br>
+    <table width="80%" border="0" align="center" class="menu" style="margin-bottom: 8px; font-size: 26px;">
+        <tbody>
+            <tr>
+                <!-- <td style="text-align: center; width:0%; ">CVPR 2025 Highlight</td> -->
+            </tr>
+        </tbody>
+    </table>
+    &nbsp;<br>
+    <p class="author">
+        <span class="author"><a target="_blank" href="https://qihao067.github.io/">Qihao Liu</a>&nbsp;<sup>1,2</sup></span>
+        <span class="author"><a target="_blank" href="https://chengzhi-mao.github.io/">Chengzhi Mao</a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a target="_blank" href="https://yaojieliu.github.io/">Yaojie Liu</a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a target="_blank" href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>&nbsp;<sup>2</sup></span>
+        <span class="author"><a target="_blank" href="https://l2ior.github.io/">Wen-Sheng Chu&nbsp;</a><sup>1</sup></span>
+    </p>
+    <table width="0%" border="0" align="center" class="affiliations">
+    <tbody align="center">
+        <tr>
+            <td style="text-align: right; width:0%; padding: 0; padding-right: 30px; margin: 0;">
+                &nbsp;<sup>1</sup>&nbsp;Google
+            </td>
+            <td style="text-align: left; width:0%; padding: 0; padding-left: 30px; margin: 0;">
+                &nbsp;<sup>2</sup>&nbsp;Johns Hopkins University
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+    <table width="80%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+        <tbody>
+            <tr>
+                <td align="center"> <a href="https://arxiv.org/pdf/xxx" target="_blank">[Paper]</a>&emsp;&emsp;<a href="xxx" target="_blank">[BibTeX]</a> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    &nbsp;<br>
+
+    
+    <section class="auditdm-page">
+      <!-- Top: leaderboards + questions -->
+      <header class="hero">
+        <h2 class="hero__title">LLM/MLLM leaderboards tell us who wins —</h2>
+        <p class="hero__sub">
+          but they rarely explain <strong>what changed</strong>, <strong>where it fails</strong>, or <strong>what’s still missing</strong>.
+        </p>
+
+        <div class="qgrid">
+          <a class="qcard">
+            <span class="qcard__text">What’s different, and why?</span>
+          </a>
+          <a class="qcard">
+            <span class="qcard__text">Where (and how) does it break?</span>
+          </a>
+          <a class="qcard">
+            <span class="qcard__text">Is 3B model enough for my task?</span>
+          </a>
+          <a class="qcard">
+            <span class="qcard__text">What’s still missing from the latest model?</span>
+          </a>
+        </div>
+      </header>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <!-- Bottom: AuditDM -->
+      <section id="auditdm" class="proposal">
+        <h2 class="proposal__title">
+          Therefore, we propose <span class="chip">AuditDM</span>
+        </h2>
+        <p class="proposal__sub">
+          A framework that finds capability gaps and turns them into concrete fixes.
+        </p>
+
+        <div class="fgrid">
+          <article class="fcard fcard--figure-full">
+            <div class="fcard__badge">1</div>
+            <p class="fcard__text">
+              Systematically discovers capability gaps between models and produces interpretable weakness summaries, enabling a comprehensive understanding of model behavior.
+            </p>
+            <button class="fcard__imgBtn" type="button" data-img="./fig/auditing.png" aria-label="Open figure in large view">
+              <img class="fcard__figure" src="./fig/auditing.png" alt="AuditDM teaser figure">
+            </button>
+          </article>
+
+          <article class="fcard fcard--figure-full">
+            <div class="fcard__badge">2</div>
+            <p class="fcard__text">
+              <strong>Delivers actionable feedback</strong> that guides fixes and model improvement.
+            </p>
+            <button class="fcard__imgBtn2" type="button" data-img="./fig/improving.png" aria-label="Open figure in large view">
+              <img class="fcard__figure" src="./fig/improving.png" alt="AuditDM improving figure">
+            </button>
+          </article>
+        </div>
+      </section>
+    </section>
+
+
+
+    
+    <div class="container">
+
+        
+
+        &nbsp;<br>
+        <hr class="hr-twill-colorful">
+        &nbsp;<br>
+
+        <p style="text-align: center;"><span class="section"><strong>Abstract</strong></span></p>
+        <p> Conventional evaluation methods for multimodal LLMs (MLLMs) lack interpretability and are often insufficient to fully disclose significant capability gaps across models. To address this, we introduce <b><span class="chip">AuditDM</span></b>, an automated framework that actively discovers and rectifies MLLM failure modes by auditing their divergence. <b><span class="chip">AuditDM</span></b> fine-tunes an MLLM as an auditor via reinforcement learning to generate challenging questions and counterfactual images that maximize disagreement among target models. Once trained, the auditor uncovers diverse, interpretable exemplars that reveal model weaknesses and serve as annotation-free data for rectification. When applied to SoTA models like Gemma-3 and PaliGemma-2, <b><span class="chip">AuditDM</span></b> discovers more than 20 distinct failure types. Fine-tuning on these discoveries consistently improves all models across 16 benchmarks, and enables a 3B model to surpass its 28B counterpart. Our results suggest that as data scaling hits diminishing returns, targeted model auditing offers an effective path to model diagnosis and improvement.
+        <p class="section">&nbsp;</p>
+
+        &nbsp;<br>
+        <hr class="hr-twill-colorful">
+        &nbsp;<br>
+
+        <p style="text-align: center;"><span class="section"><strong>Method</strong></span></p>
+        <p class="section"></p>
+        <div style="text-align: center">
+            <img src="./fig/pipeline.png" alt="" width="100%" style="margin: auto" />
+        </div>
+        <p class="section">&nbsp;</p>
+        <p> <b><span class="chip">AuditDM</span></b> fine-tunes an MLLM into an auditor that generates challenging probing questions and counterfactual images (via captions for image regeneration or editing commands), yielding question–image pairs on which the target model fails while the MLLM ensemble agrees, thus exposing capability gaps and failure modes. The auditor is trained to maximize prediction discrepancy between the target and the ensemble. Once trained, it identifies weaknesses and failure cases in a single inference pass.</p>
+        <p class="section">&nbsp;</p>
+        <hr class="hr-twill-colorful">
+        <p class="section">&nbsp;</p>
+
+
+
+
+        <p style="text-align: center;"><span class="chip_section">AuditDM</span><span class="section"><strong> for Model Failure Detection</strong></span></p>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span></b> identifies the top 15 failure modes and challenging task categories for PaliGemma2-3B and 28B models at 448x448, and we report normalized per-category failure rates. Tasks are ordered left to right, beginning with the most pronounced weaknesses of the 3B model and progressing to those of the 28B. Notably, we observe that for certain tasks, the 28B model performs significantly worse than the 3B model. For example, on challenging images, the 28B model struggles more with color recognition and counting, and is more prone to hallucination</td>
+                </tr>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <figure style="text-align: center;">
+                    <img src="./fig/weakness_1.png" alt="" style="width: 97%; height: auto;">
+                </figure>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: left; width:80%; font-size: 16px;">We provide examples generated by <span class="chip">AuditDM</span></b> for each failure category. To better demonstrate the effectiveness, we focus on examples with original images and generated questions in this figure. Image-question pairs with both generated images and questions are provided in the main paper. Some images are cropped or rotated for better figure layout.</td>
+                </tr>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <figure style="text-align: center;">
+                    <img src="./fig/weakness_2.png" alt="" style="width: 97%; height: auto;">
+                </figure>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span> efficiently detects fine-grained visual cues that are irrelevant to the task/question yet still alter model predictions. We target PaliGemma2-28B (448x448) and showcase small modifications that fool the 28B model but not the 3B model, highlighting the effectiveness of our method in finding failures even in very powerful models. For each example, we show the original image (left), the modified image (right), and the corresponding answers. Our analysis shows that even the PaliGemma-2 28B model is highly sensitive to minor changes in task-irrelevant objects, suggesting that current MLLMs may still fail to ground visual reasoning in the correct evidence.</td>
+                </tr>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <figure style="text-align: center;">
+                    <img src="./fig/weakness_3.png" alt="" style="width: 97%; height: auto;">
+                </figure>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p>
+        <hr class="hr-twill-colorful">
+
+
+
+
+        <p class="section">&nbsp;</p>
+        <p style="text-align: center;"><span class="chip_section">AuditDM</span><span class="section"><strong> for Model Improvement</strong></span></p>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span> also enables efficient, scalable synthesis of weakness-aligned training data. Once trained, the auditor can generate a tailored image–question pair from a single inference on any image. Training on this data yields significant gains across all tested benchmarks.</td>
+                </tr>
+            </tbody>
+        </table>
+        &nbsp;
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <div class="two-images same-height">
+                  <figure class="two-images__figure">
+                    <div class="imgbox">
+                        <img src="./fig/fig_performance_pg.png" alt="PaliGemma-2">
+                    </div>
+                    <figcaption class="two-images__cap">Improving PaliGemma2-3B.</figcaption>
+                  </figure>
+
+                  <figure class="two-images__figure">
+                    <div class="imgbox">
+                        <img src="./fig/fig_performance_g.png" alt="Gemma-3">
+                    </div>
+                    <figcaption class="two-images__cap">Improving Gemma3-4B.</figcaption>
+                  </figure>
+                </div>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p>
+        <hr class="hr-twill-colorful">
+
+
+
+<!--         <p class="section">&nbsp;</p>
+        <p class="section" id="ak"><b>Acknowledgements</b></p>
+        <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td style="text-align: left; width:0%; ">We sincerely appreciate Ricky Chen and Saketh Rambhatla for their valuable discussions.</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+
+        <p class="section">&nbsp;</p>
+        <p class="section" id="bibtex"><b>BibTex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+                      background: #eee;
+                      white-space: pre;
+                      -webkit-overflow-scrolling: touch;
+                      max-width: 100%;
+                      min-width: 100px;
+                      border-radius: 0px;
+                      ">
+@article{liu2025revision,
+  title={Differences That Matter: Auditing Models for Capability Gap Discovery and Rectification},
+  author={Liu, Qihao and Mao, Chengzhi and Liu, Yaojie and Yuille, Alan and Chu, Wen-Sheng},
+  journal={arXiv preprint arXiv:xxxx},
+  year={2025}
+}
+			  </pre>
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WLX2Z5QLG8');
+ </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function () {
+
+        if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+            $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+        }
+
+        $(window).on("scroll", function() {
+            localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+        });
+
+      });
+ </script>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
