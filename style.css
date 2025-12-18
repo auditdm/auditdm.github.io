@@ -404,6 +404,22 @@ code {
   text-shadow: 0 0 6px rgba(255,255,255,.45);
 }
 
+.chip-glow{
+  position: relative;
+  display: inline-block;
+}
+
+.chip-glow::before{
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: -1;                 /* put glow behind */
+  color: rgba(255,255,255,.55);
+  filter: blur(6px);
+  transform: translateY(1px);  /* optional: tiny offset */
+  pointer-events: none;
+}
+
 
 .proposal__sub{
   margin: 10px 0 0;

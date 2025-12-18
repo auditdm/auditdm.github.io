@@ -110,7 +110,7 @@
       <!-- Bottom: AuditDM -->
       <section id="auditdm" class="proposal">
         <h2 class="proposal__title">
-          Therefore, we propose <span class="chip">AuditDM</span>
+          Therefore, we propose <span class="chip chip-glow" data-text="AuditDM">AuditDM</span>
         </h2>
         <p class="proposal__sub">
           A framework that finds capability gaps and turns them into concrete fixes.
@@ -152,7 +152,7 @@
         &nbsp;<br>
 
         <p style="text-align: center;"><span class="section"><strong>Abstract</strong></span></p>
-        <p> Conventional evaluation methods for multimodal LLMs (MLLMs) lack interpretability and are often insufficient to fully disclose significant capability gaps across models. To address this, we introduce <b><span class="chip">AuditDM</span></b>, an automated framework that actively discovers and rectifies MLLM failure modes by auditing their divergence. <b><span class="chip">AuditDM</span></b> fine-tunes an MLLM as an auditor via reinforcement learning to generate challenging questions and counterfactual images that maximize disagreement among target models. Once trained, the auditor uncovers diverse, interpretable exemplars that reveal model weaknesses and serve as annotation-free data for rectification. When applied to SoTA models like Gemma-3 and PaliGemma-2, <b><span class="chip">AuditDM</span></b> discovers more than 20 distinct failure types. Fine-tuning on these discoveries consistently improves all models across 16 benchmarks, and enables a 3B model to surpass its 28B counterpart. Our results suggest that as data scaling hits diminishing returns, targeted model auditing offers an effective path to model diagnosis and improvement.
+        <p> Conventional evaluation methods for multimodal LLMs (MLLMs) lack interpretability and are often insufficient to fully disclose significant capability gaps across models. To address this, we introduce <b><span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b>, an automated framework that actively discovers and rectifies MLLM failure modes by auditing their divergence. <b><span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b> fine-tunes an MLLM as an auditor via reinforcement learning to generate challenging questions and counterfactual images that maximize disagreement among target models. Once trained, the auditor uncovers diverse, interpretable exemplars that reveal model weaknesses and serve as annotation-free data for rectification. When applied to SoTA models like Gemma-3 and PaliGemma-2, <b><span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b> discovers more than 20 distinct failure types. Fine-tuning on these discoveries consistently improves all models across 16 benchmarks, and enables a 3B model to surpass its 28B counterpart. Our results suggest that as data scaling hits diminishing returns, targeted model auditing offers an effective path to model diagnosis and improvement.
         <p class="section">&nbsp;</p>
 
         &nbsp;<br>
@@ -165,7 +165,7 @@
             <img src="./fig/pipeline.png" alt="" width="100%" style="margin: auto" />
         </div>
         <p class="section">&nbsp;</p>
-        <p> <b><span class="chip">AuditDM</span></b> fine-tunes an MLLM into an auditor that generates challenging probing questions and counterfactual images (via captions for image regeneration or editing commands), yielding question–image pairs on which the target model fails while the MLLM ensemble agrees, thus exposing capability gaps and failure modes. The auditor is trained to maximize prediction discrepancy between the target and the ensemble. Once trained, it identifies weaknesses and failure cases in a single inference pass.</p>
+        <p> <b><span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b> fine-tunes an MLLM into an auditor that generates challenging probing questions and counterfactual images (via captions for image regeneration or editing commands), yielding question–image pairs on which the target model fails while the MLLM ensemble agrees, thus exposing capability gaps and failure modes. The auditor is trained to maximize prediction discrepancy between the target and the ensemble. Once trained, it identifies weaknesses and failure cases in a single inference pass.</p>
         <p class="section">&nbsp;</p>
         <hr class="hr-twill-colorful">
         <p class="section">&nbsp;</p>
@@ -173,12 +173,12 @@
 
 
 
-        <p style="text-align: center;"><span class="chip_section">AuditDM</span><span class="section"><strong> for Model Failure Detection</strong></span></p>
+        <p style="text-align: center;"><span class="chip_section chip-glow" data-text="AuditDM">AuditDM</span><span class="section"><strong> for Model Failure Detection</strong></span></p>
         &nbsp;
         <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
             <tbody>
                 <tr>
-                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span></b> identifies the top 15 failure modes and challenging task categories for PaliGemma2-3B and 28B models at 448x448, and we report normalized per-category failure rates. Tasks are ordered left to right, beginning with the most pronounced weaknesses of the 3B model and progressing to those of the 28B. Notably, we observe that for certain tasks, the 28B model performs significantly worse than the 3B model. For example, on challenging images, the 28B model struggles more with color recognition and counting, and is more prone to hallucination</td>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b> identifies the top 15 failure modes and challenging task categories for PaliGemma2-3B and 28B models at 448x448, and we report normalized per-category failure rates. Tasks are ordered left to right, beginning with the most pronounced weaknesses of the 3B model and progressing to those of the 28B. Notably, we observe that for certain tasks, the 28B model performs significantly worse than the 3B model. For example, on challenging images, the 28B model struggles more with color recognition and counting, and is more prone to hallucination</td>
                 </tr>
             </tbody>
         </table>
@@ -194,7 +194,7 @@
         <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
             <tbody>
                 <tr>
-                    <td style="text-align: left; width:80%; font-size: 16px;">We provide examples generated by <span class="chip">AuditDM</span></b> for each failure category. To better demonstrate the effectiveness, we focus on examples with original images and generated questions in this figure. Image-question pairs with both generated images and questions are provided in the main paper. Some images are cropped or rotated for better figure layout.</td>
+                    <td style="text-align: left; width:80%; font-size: 16px;">We provide examples generated by <span class="chip chip-glow" data-text="AuditDM">AuditDM</span></b> for each failure category. To better demonstrate the effectiveness, we focus on examples with original images and generated questions in this figure. Image-question pairs with both generated images and questions are provided in the main paper. Some images are cropped or rotated for better figure layout.</td>
                 </tr>
             </tbody>
         </table>
@@ -210,7 +210,7 @@
         <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
             <tbody>
                 <tr>
-                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span> efficiently detects fine-grained visual cues that are irrelevant to the task/question yet still alter model predictions. We target PaliGemma2-28B (448x448) and showcase small modifications that fool the 28B model but not the 3B model, highlighting the effectiveness of our method in finding failures even in very powerful models. For each example, we show the original image (left), the modified image (right), and the corresponding answers. Our analysis shows that even the PaliGemma-2 28B model is highly sensitive to minor changes in task-irrelevant objects, suggesting that current MLLMs may still fail to ground visual reasoning in the correct evidence.</td>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip chip-glow" data-text="AuditDM">AuditDM</span> efficiently detects fine-grained visual cues that are irrelevant to the task/question yet still alter model predictions. We target PaliGemma2-28B (448x448) and showcase small modifications that fool the 28B model but not the 3B model, highlighting the effectiveness of our method in finding failures even in very powerful models. For each example, we show the original image (left), the modified image (right), and the corresponding answers. Our analysis shows that even the PaliGemma-2 28B model is highly sensitive to minor changes in task-irrelevant objects, suggesting that current MLLMs may still fail to ground visual reasoning in the correct evidence.</td>
                 </tr>
             </tbody>
         </table>
@@ -229,12 +229,12 @@
 
 
         <p class="section">&nbsp;</p>
-        <p style="text-align: center;"><span class="chip_section">AuditDM</span><span class="section"><strong> for Model Improvement</strong></span></p>
+        <p style="text-align: center;"><span class="chip_section chip-glow" data-text="AuditDM">AuditDM</span><span class="section"><strong> for Model Improvement</strong></span></p>
         &nbsp;
         <table width="100%" border="0" align="center" class="menu" style="margin-bottom: 8px;">
             <tbody>
                 <tr>
-                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip">AuditDM</span> also enables efficient, scalable synthesis of weakness-aligned training data. Once trained, the auditor can generate a tailored image–question pair from a single inference on any image. Training on this data yields significant gains across all tested benchmarks.</td>
+                    <td style="text-align: left; width:80%; font-size: 16px;"><span class="chip chip-glow" data-text="AuditDM">AuditDM</span> also enables efficient, scalable synthesis of weakness-aligned training data. Once trained, the auditor can generate a tailored image–question pair from a single inference on any image. Training on this data yields significant gains across all tested benchmarks.</td>
                 </tr>
             </tbody>
         </table>
